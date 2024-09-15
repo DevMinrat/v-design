@@ -1,0 +1,105 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+
+  // @include breakpoint($xl-bp) {
+  //   font-size: calc(100vw / 1600 * 10);
+  // }
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 1385 * 10);
+  }
+  @include breakpoint($lg-bp) {
+    font-size: calc(100vw / 830 * 10);
+  }
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Commissioner, sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: $black;
+
+  background-color: white;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+  }
+}
+
+main {
+  @include breakpoint($sm-bp) {
+    padding-top: 7rem;
+  }
+}
+
+img {
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+sub,
+sup {
+  line-height: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  transition: all 0.1s linear;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+/* Vendors */
+
+@import "vendor/swiper";
+
+/* Blocks */
+
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/hollow-btn";
+@import "blocks/filled-btn";
+@import "blocks/section";
+@import "blocks/menu";
+@import "blocks/breadcrumb";
+
+@import "blocks/intro";
+@import "blocks/why";
+@import "blocks/porfolio";
+
+
+@import "blocks/footer";
+
+.dark-bg {
+  background: #f5f5f5;
+}
+.white-bg {
+  background: white;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}

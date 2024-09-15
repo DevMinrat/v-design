@@ -1,0 +1,45 @@
+.hollow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 25.6rem;
+  height: 6.4rem;
+  background: #ffffff;
+
+  font-family: Commissioner, sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+
+  border: 0.2rem solid $primary;
+  border-radius: 0.5rem;
+  background: transparent;
+
+  transition: all 0.1s linear;
+}
+
+.hollow-btn__text {
+  margin-right: 0.8rem;
+  transition: all 0.1s linear;
+}
+
+.hollow-btn__icon {
+  width: 2rem;
+  height: 2.4rem;
+
+  fill: $primary;
+  transition: all 0.1s linear;
+}
+
+.hollow-btn:hover {
+  background: $primary;
+
+  & .hollow-btn__text {
+    color: white;
+  }
+
+  & .hollow-btn__icon {
+    fill: white;
+  }
+}

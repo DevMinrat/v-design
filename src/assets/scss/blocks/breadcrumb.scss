@@ -1,0 +1,38 @@
+.breadcrumb-wrapper {
+  @include breakpoint($sm-bp) {
+    display: none;
+  }
+}
+
+.breadcrumb {
+  margin-top: 8.3rem;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
+}
+
+.breadcrumb ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.breadcrumb li:not(:first-child)::before {
+  content: "/";
+  padding: 0 0.5rem;
+}
+
+.breadcrumb li,
+.breadcrumb a {
+  color: $black;
+
+  transition: all 0.2s linear;
+}
+
+.breadcrumb li span {
+  color: #9e9e9e;
+}
+
+.breadcrumb a:hover {
+  color: $primary;
+}

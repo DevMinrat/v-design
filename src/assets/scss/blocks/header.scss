@@ -1,0 +1,72 @@
+.header {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  z-index: 999;
+
+  width: 100%;
+
+  transition: all 0.2s linear;
+  transform: translateY(0);
+
+  @include breakpoint($sm-bp) {
+    border-bottom: none;
+  }
+}
+
+.header.out {
+  transform: translateY(-160%);
+  box-shadow: none;
+}
+
+.header__inner {
+  height: 6.5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include breakpoint($sm-bp) {
+    height: 6rem;
+  }
+}
+
+.header__info {
+  display: flex;
+}
+
+// hamburger
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  width: 3rem;
+  cursor: pointer;
+
+  transition: all 0.1s linear;
+
+  transform: translateX(0);
+}
+
+.hamburger-menu.active {
+  transform: translateX(2rem);
+}
+
+.hm-line {
+  height: 0.3rem;
+  margin: 0.4rem 0;
+
+  background: $gray;
+  border-radius: 0.3rem;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+  @include breakpoint($sm-bp) {
+    height: 0.3rem;
+    margin: 0.2rem 0;
+  }
+}
+
+.hm-line:nth-of-type(3) {
+  width: 50%;
+  align-self: flex-end;
+}

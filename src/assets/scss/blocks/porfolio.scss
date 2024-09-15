@@ -1,0 +1,36 @@
+.portfolio__inner {
+  display: flex;
+  gap: 0.5rem;
+
+}
+
+.portfolio__header {
+  margin-bottom: 2rem;
+
+  & .section__title-wrapper {
+    padding: 1rem 0;
+
+    border-top: 0.1rem solid black;
+    border-bottom: 0.1rem solid black;
+  }
+}
+
+.portfolio__title {
+  padding-left: 15rem;
+
+}
+
+.portfolio__item {
+  flex-basis: 25%;
+}
+
+.portfolio__item-img {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

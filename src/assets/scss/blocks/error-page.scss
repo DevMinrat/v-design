@@ -1,0 +1,81 @@
+.error-page {
+  padding: 8.8rem 0 15.5rem;
+
+  @include breakpoint($sm-bp) {
+    padding: 4rem 0 9rem;
+  }
+
+  & .xl-circle {
+    top: 20rem;
+
+    @include breakpoint($sm-bp) {
+      display: none;
+    }
+  }
+}
+
+.error-page__inner {
+  width: 100%;
+  max-width: 71.5rem;
+
+  margin: 0 auto;
+}
+
+.error-page__info {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 4rem;
+
+  @include breakpoint($sm-bp) {
+    flex-wrap: wrap;
+    justify-content: center;
+
+    margin-bottom: 0;
+  }
+}
+
+.error-page__info-img {
+  width: 100%;
+  max-width: 26.8rem;
+  height: auto;
+
+  margin-right: 5rem;
+
+  @include breakpoint($sm-bp) {
+    max-width: 20rem;
+
+    margin-right: 0;
+  }
+}
+
+.error-page__info-num {
+  font-size: 20rem;
+  font-weight: bold;
+  color: #97d8ff;
+
+  @include breakpoint($sm-bp) {
+    font-size: 14.4rem;
+  }
+}
+
+.error-page__text {
+  font-size: 2.4rem;
+
+  margin-bottom: 6rem;
+
+  @include breakpoint($sm-bp) {
+    font-size: 1.6rem;
+
+    margin-bottom: 4px;
+  }
+}
+
+.error-page__back-link {
+  max-width: 16rem;
+  height: 4rem;
+
+  font-size: 1.4rem;
+
+  margin: 0 auto;
+}

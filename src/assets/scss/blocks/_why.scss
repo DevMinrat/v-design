@@ -1,0 +1,26 @@
+.why__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.why-item {
+  flex-basis: 25%;
+
+  padding-right: 2.5rem;
+
+  &:nth-child(n+2) {
+
+    border-left: 0.1rem solid black;
+
+    padding-left: 2.5rem;
+  }
+}
+
+.why-item__title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.why-item__descr {
+
+}

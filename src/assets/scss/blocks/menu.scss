@@ -1,0 +1,58 @@
+.menu__inner {
+  width: 100%;
+
+  display: flex;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: 140rem;
+  height: 100%;
+
+  & a {
+    height: 100%;
+
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      border-right: 0.1rem solid #f5f5f5;
+    }
+
+    &:nth-child(2), &:nth-child(3) {
+      border-right: none;
+    }
+
+    &:not(:nth-child(3)) {
+      border-top: 0.1rem solid white;
+      border-bottom: 0.1rem solid white;
+    }
+
+    @include breakpoint($sm-bp) {
+
+    }
+  }
+
+  & a:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+.logo {
+  width: 100%;
+  max-width: 22rem;
+  fill: white;
+}
+
+

@@ -1,0 +1,44 @@
+.section {
+  padding: 5rem 0;
+
+  @include breakpoint($sm-bp) {
+    padding: 8.5rem 0 8rem;
+  }
+}
+
+.section__title-wrapper {
+  padding: 5rem 0;
+}
+
+.section__title {
+  width: 100%;
+  max-width: 70rem;
+
+  font-family: Oswald, sans-serif;
+  font-size: 3.2rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: black;
+  text-transform: uppercase;
+}
+
+.asd::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+
+  content: "";
+
+  width: 10rem;
+  height: 10rem;
+
+  background: $secondary;
+  border-radius: 50%;
+
+  @include breakpoint($sm-bp) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
