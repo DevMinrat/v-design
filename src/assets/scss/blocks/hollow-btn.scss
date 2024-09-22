@@ -12,8 +12,10 @@
   font-weight: bold;
   font-size: 1.8rem;
 
-  border: 0.2rem solid $primary;
-  border-radius: 0.5rem;
+  border: none;
+  border-top: 0.1rem solid $primary;
+  border-bottom: 0.1rem solid $primary;
+
   background: transparent;
 
   transition: all 0.1s linear;
@@ -33,6 +35,8 @@
 }
 
 .hollow-btn:hover {
+  color: white;
+
   background: $primary;
 
   & .hollow-btn__text {

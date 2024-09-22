@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   left: 0;
   z-index: 999;
@@ -14,10 +14,10 @@
   }
 }
 
-.header.out {
-  transform: translateY(-160%);
-  box-shadow: none;
-}
+//.header.out {
+//  transform: translateY(-160%);
+//  box-shadow: none;
+//}
 
 .header__inner {
   height: 6.5rem;

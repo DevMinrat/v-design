@@ -447,7 +447,7 @@ html {
 }
 
 body {
-  font-family: Commissioner, sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.5;
@@ -482,7 +482,7 @@ a {
   transition: all 0.1s linear;
 }
 a:hover {
-  color: #2eb1ff;
+  color: #262626;
 }
 
 /* Vendors */
@@ -1044,7 +1044,7 @@ button.swiper-pagination-bullet {
 }
 .slider-btn-prev:hover .slider__nav-icon,
 .slider-btn-next:hover .slider__nav-icon {
-  fill: #009dfa;
+  fill: #0d0d0d;
 }
 
 .slider-btn-prev {
@@ -1060,7 +1060,7 @@ button.swiper-pagination-bullet {
 .slider__nav-icon {
   width: 34px;
   height: 34px;
-  fill: #2eb1ff;
+  fill: #262626;
   transition: all 0.1s linear;
   pointer-events: none;
 }
@@ -1088,12 +1088,12 @@ button.swiper-pagination-bullet {
 .swiper-button-next svg {
   width: 3.2rem;
   height: 3.2rem;
-  fill: #2eb1ff;
+  fill: #262626;
   transition: all 0.1s linear;
 }
 .swiper-button-prev svg:hover,
 .swiper-button-next svg:hover {
-  fill: #005d94;
+  fill: black;
 }
 
 .swiper-button-prev {
@@ -1121,7 +1121,7 @@ button.swiper-pagination-bullet {
 }
 
 .header {
-  position: fixed;
+  position: absolute;
   top: 2rem;
   left: 0;
   z-index: 999;
@@ -1133,11 +1133,6 @@ button.swiper-pagination-bullet {
   .header {
     border-bottom: none;
   }
-}
-
-.header.out {
-  transform: translateY(-160%);
-  box-shadow: none;
 }
 
 .header__inner {
@@ -1199,8 +1194,9 @@ button.swiper-pagination-bullet {
   font-family: Commissioner, sans-serif;
   font-weight: bold;
   font-size: 1.8rem;
-  border: 0.2rem solid #2eb1ff;
-  border-radius: 0.5rem;
+  border: none;
+  border-top: 0.1rem solid #262626;
+  border-bottom: 0.1rem solid #262626;
   background: transparent;
   transition: all 0.1s linear;
 }
@@ -1213,12 +1209,13 @@ button.swiper-pagination-bullet {
 .hollow-btn__icon {
   width: 2rem;
   height: 2.4rem;
-  fill: #2eb1ff;
+  fill: #262626;
   transition: all 0.1s linear;
 }
 
 .hollow-btn:hover {
-  background: #2eb1ff;
+  color: white;
+  background: #262626;
 }
 .hollow-btn:hover .hollow-btn__text {
   color: white;
@@ -1238,8 +1235,8 @@ button.swiper-pagination-bullet {
   font-weight: bold;
   font-size: 1.8rem;
   color: white;
-  background: #2eb1ff;
-  border: 0.2rem solid #2eb1ff;
+  background: #262626;
+  border: 0.2rem solid #262626;
   border-radius: 0.5rem;
   transition: all 0.1s linear;
 }
@@ -1258,7 +1255,9 @@ button.swiper-pagination-bullet {
 }
 
 .section__title-wrapper {
-  padding: 5rem 0;
+  padding: 1rem 0;
+  border-top: 0.1rem solid black;
+  border-bottom: 0.1rem solid black;
 }
 
 .section__title {
@@ -1270,6 +1269,7 @@ button.swiper-pagination-bullet {
   line-height: 1.5;
   color: black;
   text-transform: uppercase;
+  padding-left: 15rem;
 }
 
 .asd::before {
@@ -1325,7 +1325,7 @@ button.swiper-pagination-bullet {
   border-bottom: 0.1rem solid white;
 }
 .menu a:hover {
-  color: #2eb1ff;
+  color: #262626;
   text-decoration: underline;
 }
 
@@ -1371,7 +1371,7 @@ button.swiper-pagination-bullet {
 }
 
 .breadcrumb a:hover {
-  color: #2eb1ff;
+  color: #262626;
 }
 
 .intro {
@@ -1449,23 +1449,49 @@ button.swiper-pagination-bullet {
   padding-left: 2.5rem;
 }
 
+.why-header {
+  padding: 5rem 0;
+  border: none;
+}
+
 .why-item__title {
+  display: block;
+  min-height: 6rem;
+  font-family: "Manrope", sans-serif;
+  text-transform: uppercase;
   font-weight: bold;
   font-size: 2rem;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.why-item__descr {
+  font-family: "Manrope", sans-serif;
 }
 
 .portfolio__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 0.5rem;
+  margin-bottom: 5rem;
+}
+.portfolio__inner.hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.2s background-color linear;
+}
+.portfolio__inner.hover .portfolio__item:after {
+  opacity: 1;
+}
+.portfolio__inner.hover .portfolio__item.hover {
+  z-index: 12;
+}
+.portfolio__inner.hover .portfolio__item.hover:after {
+  opacity: 0;
 }
 
 .portfolio__header {
   margin-bottom: 2rem;
-}
-.portfolio__header .section__title-wrapper {
-  padding: 1rem 0;
-  border-top: 0.1rem solid black;
-  border-bottom: 0.1rem solid black;
 }
 
 .portfolio__title {
@@ -1473,7 +1499,27 @@ button.swiper-pagination-bullet {
 }
 
 .portfolio__item {
-  flex-basis: 25%;
+  position: relative;
+}
+.portfolio__item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: 0.2s opacity linear;
+}
+.portfolio__item.hover .portfolio-item__desr {
+  opacity: 1;
+}
+.portfolio__item:nth-child(5) .portfolio-item__desr, .portfolio__item:nth-child(10) .portfolio-item__desr {
+  text-align: right;
+  right: 101.5%;
+  background: linear-gradient(270deg, rgba(32, 32, 32, 0.72) 25%, rgba(32, 32, 32, 0) 100%);
 }
 
 .portfolio__item-img {
@@ -1484,6 +1530,29 @@ button.swiper-pagination-bullet {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.portfolio__btn {
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 200;
+}
+
+.portfolio-item__desr {
+  position: absolute;
+  right: -101.5%;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  height: max-content;
+  color: white;
+  padding: 2rem;
+  background: linear-gradient(90deg, rgba(32, 32, 32, 0.72) 25%, rgba(32, 32, 32, 0) 100%);
+  opacity: 0;
+  transition: 0.2s opacity linear;
 }
 
 .footer {
@@ -1643,7 +1712,7 @@ button.swiper-pagination-bullet {
   }
 }
 .footer__nav a:hover {
-  color: #2eb1ff;
+  color: #262626;
 }
 
 .footer__copy {
