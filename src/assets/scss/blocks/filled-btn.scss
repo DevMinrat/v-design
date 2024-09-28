@@ -12,14 +12,16 @@
   font-size: 1.8rem;
   color: white;
 
-  background: $primary;
-  border: 0.2rem solid $primary;
-  border-radius: 0.5rem;
+  border: none;
+  border-top: 0.1rem solid white;
+  border-bottom: 0.1rem solid white;
+
+  background: transparent;
 
   transition: all 0.1s linear;
 
   &:hover {
-    background: transparent;
-    color: $black;
+    background: white;
+    color: $primary;
   }
 }

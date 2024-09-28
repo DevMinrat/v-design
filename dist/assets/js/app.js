@@ -35,18 +35,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   var portf_items = document.querySelectorAll(".portfolio__item");
   var portf_inner = document.querySelector(".portfolio__inner");
-  portf_inner.addEventListener("mouseover", function () {
-    portf_inner.classList.add("hover");
-  });
-  portf_inner.addEventListener("mouseleave", function () {
-    portf_inner.classList.remove("hover");
-  });
-  portf_items.forEach(function (el) {
-    el.addEventListener("mouseover", function () {
-      el.classList.add("hover");
+
+  if (portf_items) {
+    portf_inner.addEventListener("mouseover", function () {
+      portf_inner.classList.add("hover");
     });
-    el.addEventListener("mouseleave", function () {
-      el.classList.remove("hover");
+    portf_inner.addEventListener("mouseleave", function () {
+      portf_inner.classList.remove("hover");
     });
-  });
+    portf_items.forEach(function (el) {
+      el.addEventListener("mouseover", function () {
+        el.classList.add("hover");
+      });
+      el.addEventListener("mouseleave", function () {
+        el.classList.remove("hover");
+      });
+    });
+  }
+
+  var serviceAccTitle = document.querySelectorAll(".services-item__acc-title");
+  var serviceAccText = document.querySelectorAll(".services-item__acc-descr");
+
+  if (serviceAccTitle) {
+    serviceAccTitle.forEach(function (title, index) {
+      title.addEventListener("click", function () {
+        var isActive = title.classList.contains("active");
+        serviceAccTitle.forEach(function (el) {
+          return el.classList.remove("active");
+        });
+        serviceAccText.forEach(function (el) {
+          return el.style.maxHeight = null;
+        });
+
+        if (!isActive) {
+          title.classList.add("active");
+          serviceAccText[index].style.maxHeight = serviceAccText[index].scrollHeight + "px";
+        }
+      });
+    });
+  }
 });
