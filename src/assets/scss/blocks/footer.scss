@@ -1,162 +1,132 @@
 .footer {
-  padding: 10.4rem 0;
+  padding: 5rem 0;
 
-  background-color: $black;
-
-  @include breakpoint($sm-bp) {
-    padding: 8rem 0;
-  }
+  background-color: white;
 
   & p {
-    color: white;
+    color: $black;
   }
 }
 
 .footer__content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-  padding-bottom: 8rem;
-
-  border-bottom: 0.2rem solid #e0e0e0;
-
-  @include breakpoint($xl-bp) {
-    flex-wrap: wrap;
-  }
-
-  @include breakpoint($sm-bp) {
-    padding-bottom: 4rem;
-  }
-}
-
-.footer__info {
-  margin-right: 15rem;
-
-  @include breakpoint($xl-bp) {
-    margin-right: 0;
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 5rem;
 }
 
 .footer__logo {
+  width: 100%;
+  max-width: max-content;
+
+  svg {
+    width: 100%;
+    max-width: 30rem;
+    max-height: 6.5rem;
+    fill: $black;
+  }
+}
+
+.footer-text {
+  width: 100%;
+  max-width: 50rem;
+
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 4rem;
+
+  margin-bottom: 4rem;
+}
+
+.social-links__item {
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  margin-bottom: 7.6rem;
+  padding: 1rem;
 
-  @include breakpoint($xl-bp) {
-    margin-bottom: 4rem;
-  }
-}
+  border-radius: 1rem;
 
-.footer__logo-img {
-  width: 6.4rem;
-
-  margin-right: 3.6rem;
-
-  @include breakpoint($sm-bp) {
-    width: 4.8rem;
-
-    margin-right: 1.6rem;
-  }
-}
-
-.footer__logo-name {
-  font-weight: bold;
-  font-size: 2.4rem;
-  color: #e0e0e0;
-
-  @include breakpoint($sm-bp) {
-    font-size: 1.4rem;
-  }
-}
-
-.footer__info {
-  .social-links {
-    width: 24rem;
-  }
-
-  .social-links__item {
-    background: rgba(255, 255, 255, 0.1);
-
-    &:hover {
-      background: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  .social-links__item-icon {
-    fill: white;
-  }
-}
-
-.footer__nav {
-  display: flex;
-
-  @include breakpoint($lg-bp) {
-    flex-wrap: wrap;
-  }
-
-  .menu-serv__nav {
-    grid-template-columns: repeat(2, 25.5rem);
-    column-gap: 3.2rem;
-
-    @include breakpoint($sm-bp) {
-      grid-template-columns: repeat(2, 1fr);
-      column-gap: 2rem;
-      row-gap: 0.8rem;
-    }
-  }
-
-  .menu-serv__wrapper {
-    margin-right: 5rem;
-
-    @include breakpoint($lg-bp) {
-      order: 3;
-      width: 100%;
-
-      margin-top: 4rem;
-    }
-    @include breakpoint($sm-bp) {
-      margin-top: 2rem;
-      margin-right: 0;
-    }
-  }
-
-  .menu-clients {
-    width: 29rem;
-
-    @include breakpoint($sm-bp) {
-      width: 47%;
-    }
-  }
-
-  .menu-clients__addres {
-    color: #e0e0e0;
-
-    @include breakpoint($sm-bp) {
-      font-size: 1.2rem;
-    }
-  }
-}
-
-.footer-nav__menu-main {
-  margin-right: 7rem;
-
-  @include breakpoint($sm-bp) {
-    width: 45%;
-    margin-right: 2rem;
-  }
-}
-
-.footer__nav a {
-  color: #e0e0e0;
-
-  @include breakpoint($sm-bp) {
-    font-size: 1.2rem;
-  }
+  transition: all 0.1s linear;
 
   &:hover {
-    color: $primary;
+    background-color: $black;
+
+    & svg {
+      fill: white;
+    }
+  }
+}
+
+.social-links__item-icon {
+  width: 6rem;
+  height: 6rem;
+
+  fill: $black;
+
+  transition: all 0.1s linear;
+}
+
+.footer__phones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 4rem;
+
+  & a {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: $black;
+  }
+
+  & .footer__phones--mail {
+    font-size: 1.6rem;
+  }
+}
+
+.callback-form__descr {
+  margin-bottom: 3rem;
+}
+
+.callback-form {
+  display: flex;
+  gap: 2rem;
+
+  input {
+    color: white;
+    background-color: $black;
+    border: none;
+
+    padding: 2rem;
+
+    &::placeholder {
+      color: white;
+    }
+  }
+
+  button {
+    color: white;
+    background-color: $black;
+    border-color: $black;
+    outline-color: $black;
+
+    padding: 2rem 4rem;
+
+    transition: all 0.1s linear;
+
+    &:hover {
+      color: $black;
+      background-color: white;
+    }
   }
 }
 
@@ -165,6 +135,8 @@
   justify-content: space-between;
 
   padding-top: 2.4rem;
+
+  border-top: 0.1rem solid $black;
 
   @include breakpoint($sm-bp) {
     flex-wrap: wrap;
@@ -179,7 +151,7 @@
 }
 
 .footer__copy-dev {
-  color: white;
+  color: $black;
 
   @include breakpoint($sm-bp) {
     font-size: 1.4rem;

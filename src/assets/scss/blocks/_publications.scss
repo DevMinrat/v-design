@@ -1,0 +1,29 @@
+.publications {
+  padding: 10rem 0;
+  background: #212121;
+}
+
+.publications_header {
+  margin-bottom: 3rem;
+}
+
+.publications__content {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.publications-item {
+  flex: 1 1 25%;
+
+  transition: transform 0.1s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  img {
+    width: 30rem;
+    object-fit: cover;
+  }
+}
