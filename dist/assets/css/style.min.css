@@ -1650,6 +1650,54 @@ button.swiper-pagination-bullet {
   margin: auto auto 0;
 }
 
+.about {
+  padding-bottom: 0;
+}
+
+.about__inner {
+  display: flex;
+  gap: 5rem;
+}
+
+.about__photo-wrapper {
+  flex-basis: 50%;
+}
+
+.about__content {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about__content-title {
+  font-family: Santa_Catarina, sans-serif;
+  font-size: 20rem;
+  font-weight: normal;
+  line-height: 1;
+  color: #262626;
+  margin-bottom: 5rem;
+}
+
+.about__content-descr ul li {
+  display: flex;
+  font-size: 2.4rem;
+  line-height: 2.8rem;
+  margin-bottom: 2rem;
+}
+.about__content-descr ul li svg {
+  width: 3rem;
+  height: 2.8rem;
+  margin-right: 1rem;
+}
+
 .footer {
   padding: 10.4rem 0;
   background-color: #212121;
